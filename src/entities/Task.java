@@ -2,6 +2,7 @@ package entities;
 
 import enums.Priority;
 import enums.Status;
+import exceptions.StatusException;
 
 import java.sql.Date;
 import java.time.LocalDate;
@@ -14,6 +15,27 @@ public class Task {
     private Date createdDate;
     private transient Status statusObj;
     private String status;
+
+
+    public String getDescription() {
+        return description;
+    }
+
+    public LocalDate getCompletionDate() {
+        return completionDate.toLocalDate();
+    }
+
+    public Date getCreatedDate() {
+        return createdDate;
+    }
+
+    public Status getStatusObj() {
+        return statusObj;
+    }
+
+    public String getStatus() {
+        return status;
+    }
 
     protected Task() {
         this.statusObj = Status.NEW;
@@ -38,6 +60,46 @@ public class Task {
 
     public String getTitle() {
         return title;
+    }
+
+    public void statusDone() {
+        try {
+            statusObj.changeStatusDone(this);
+        } catch (StatusException e) {
+            System.err.println(e.getMessage());
+        }
+    }
+
+    public Priority getPriority() {
+        return priority;
+    }
+
+
+    public void statusInProgress() {
+        try {
+            statusObj.changeStatusInProgress(this);
+        } catch (StatusException e) {
+            System.err.println(e.getMessage());
+        }
+    }
+
+    public void changeDescription(String description) {
+        try {
+            statusObj.changeTaskDescription(this);
+            this.description = description;
+        } catch (StatusException e) {
+            System.err.println(e.getMessage());
+        }
+    }
+
+
+    public boolean isDeleted() {
+        try {
+            return statusObj.deleteTask(this);
+        } catch (StatusException e) {
+            System.err.println(e.getMessage());
+        }
+        return false;
     }
 
     @Override

@@ -1,0 +1,44 @@
+{
+  "tasks": [
+    {
+      "title": "Task 0",
+      "description": "Test",
+      "completionDate": "13.01.2024",
+      "priority": "MEDIUM",
+      "createdDate": "10.01.2024",
+      "status": "NEW"
+    },
+    {
+      "title": "Task 1",
+      "description": "Test",
+      "completionDate": "22.01.2024",
+      "priority": "LOW",
+      "createdDate": "10.01.2024",
+      "status": "NEW"
+    },
+    {
+      "title": "Task 2",
+      "description": "Test",
+      "completionDate": "21.01.2024",
+      "priority": "HIGH",
+      "createdDate": "10.01.2024",
+      "status": "NEW"
+    },
+    {
+      "title": "Task 3",
+      "description": "Test",
+      "completionDate": "9.01.2024",
+      "priority": "MEDIUM",
+      "createdDate": "10.01.2024",
+      "status": "IN_PROGRES"
+    },
+    {
+      "title": "Task 4",
+      "description": "Test",
+      "completionDate": "20.01.2024",
+      "priority": "HIGH",
+      "createdDate": "10.01.2024",
+      "status": "NEW"
+    }
+  ]
+}

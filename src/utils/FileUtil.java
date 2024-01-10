@@ -18,7 +18,8 @@ public class FileUtil {
 
     private static final Gson GSON = new GsonBuilder()
             .setDateFormat("dd.MM.yyyy")
-//            .setPrettyPrinting().registerTypeAdapter(LocalDate.class, new LocalDateTypeAdapter())
+            .setPrettyPrinting()
+//            .registerTypeAdapter(LocalDate.class, new LocalDateTypeAdapter())
             .create();
     private static final Path PATH = Path.of("data/tasks.json");
 

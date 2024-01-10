@@ -7,6 +7,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="gson-2.8.9" level="project" />
   </component>
   <component name="SonarLintModuleSettings">
     <option name="uniqueId" value="22cd6d5e-8c51-4b4b-a42e-cb5b1631c741" />
